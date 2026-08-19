@@ -1,0 +1,63 @@
+{
+  "mastery_evaluation": {
+    "baseline": {
+      "name": "Weighted Accuracy Baseline",
+      "r2": 0.9506,
+      "mae": 0.0494,
+      "rmse": 0.0644
+    },
+    "ml_model": {
+      "name": "Random Forest Regressor (v1)",
+      "r2": 0.9677,
+      "mae": 0.0406,
+      "rmse": 0.0521
+    },
+    "r2_improvement": 0.0171,
+    "failures": [
+      {
+        "sample_id": 363,
+        "n_attempts": 4,
+        "actual_mastery": 0.5938,
+        "predicted_mastery": 0.734861947619047,
+        "baseline_mastery": 0.75,
+        "residual_error": 0.141061947619047
+      },
+      {
+        "sample_id": 80,
+        "n_attempts": 2,
+        "actual_mastery": 0.6085,
+        "predicted_mastery": 0.46536110396585983,
+        "baseline_mastery": 0.5,
+        "residual_error": 0.1431388960341402
+      },
+      {
+        "sample_id": 254,
+        "n_attempts": 1,
+        "actual_mastery": 0.0924,
+        "predicted_mastery": 0.23587136666666697,
+        "baseline_mastery": 0.0,
+        "residual_error": 0.143471366666667
+      }
+    ]
+  },
+  "recommendation_evaluation": {
+    "popularity_baseline": {
+      "prerequisite_constraint_satisfaction_rate": 0.0,
+      "recommended_concept": "Dijkstra (BLOCKED)"
+    },
+    "engine": {
+      "prerequisite_constraint_satisfaction_rate": 1.0,
+      "recommended_concept": "Graph Traversal",
+      "prerequisite_remediation_active": true,
+      "blocked_advanced_concept_excluded": true
+    }
+  },
+  "data_leakage_audit": {
+    "temporal_leakage_pass": true,
+    "student_isolation_pass": true
+  },
+  "reproducibility": {
+    "random_seed": 42,
+    "mastery_model_version": "v1.0.0"
+  }
+}
